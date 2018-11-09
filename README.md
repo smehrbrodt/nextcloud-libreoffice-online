@@ -49,7 +49,7 @@ Leave your container, then restart it:
 ```bash
 docker-compose stop
 docker-compose start
-``
+```
 
 After that, your LibreOffice online container should be accessible with http.
 
