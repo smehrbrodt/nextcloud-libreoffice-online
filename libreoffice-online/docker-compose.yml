@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+  online:
+    image: libreoffice/online:master
+    environment:
+      domain: ${NEXTCLOUD_DOMAIN}
+      username: ${LO_ONLINE_USERNAME}
+      password: ${LO_ONLINE_PASSWORD}
+    cap_add:
+      - MKNOD
+    ports:
+      - "9980:9980"
+    restart:
+      unless-stopped
