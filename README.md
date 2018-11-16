@@ -62,6 +62,10 @@ Create a document using the '+' button or upload some.
 
 To access the LibreOffice Online admin dashboard, visit http://libreoffice.yourhost:9980/loleaflet/dist/admin/admin.html and use the credentials from your .env file.
 
+## Updating
+
+To get the latest version, run `docker-compose pull`, then restart the container.
+
 ## Troubleshooting
 
 If it doesn't work, look at the logs from your docker containers, easiest with:
