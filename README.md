@@ -40,20 +40,20 @@ Copy the `.env.sample` to `.env` and set the environment variables accordingly.
 * `LO_ONLINE_USERNAME` and `LO_ONLINE_PASSWORD` are used to access the LibreOffice Online dashboard (not absolutely necessary).
 
 Once set, run `docker-compose up -d`.
-This will start LibreOffice online. It uses SSL by default and we need to disable that.
+This will start LibreOffice online with SSL disabled.
 
-Find out the ID of your running docker container by typing `docker container list`.
+### Configuration changes
+
+If you need to change the configuration of LibreOffice Online, you need to first find out the ID of your running docker container by typing `docker container list`.
 Then get into your docker container with `docker exec -it <container-id> bash`.
 
-Now edit `/etc/loolwsd/loolwsd.xml` and disable SSL (section `<ssl>` `<enable>`). You might have to install an editor beforehand.
+Now edit `/etc/loolwsd/loolwsd.xml` and make your changes. You might have to install an editor beforehand.
 
 Leave your container, then restart it:
 ```bash
 docker-compose stop
 docker-compose start
 ```
-
-After that, your LibreOffice online container should be accessible with http.
 
 ## Using it
 
