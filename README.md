@@ -61,7 +61,12 @@ To access the LibreOffice Online admin dashboard, visit http://libreoffice.yourh
 
 ## Updating
 
-To get the latest version, run `docker-compose pull`, then restart the container.
+To get the latest version, run the following two commands:
+
+```bash
+docker-compose pull
+docker-compose up -d --build
+```
 
 ## Troubleshooting
 
