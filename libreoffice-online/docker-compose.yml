@@ -8,6 +8,7 @@ services:
       username: ${LO_ONLINE_USERNAME}
       password: ${LO_ONLINE_PASSWORD}
       extra_params: ${LO_ONLINE_EXTRA_PARAMS}
+      DONT_GEN_SSL_CERT: 1
     cap_add:
       - MKNOD
     ports:
