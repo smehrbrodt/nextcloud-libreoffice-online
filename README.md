@@ -44,16 +44,13 @@ This will start LibreOffice online with SSL disabled.
 
 ### Configuration changes
 
-If you need to change the configuration of LibreOffice Online, you need to first find out the ID of your running docker container by typing `docker container list`.
-Then get into your docker container with `docker exec -it <container-id> bash`.
+The configuration is stored in a docker volume. This way LibreOffice Online can be configured on the host system
+and the config will not be overwritten when updating the docker container.
 
-Now edit `/etc/loolwsd/loolwsd.xml` and make your changes. You might have to install an editor beforehand.
+The volume is created by docker-compose. You can find the location of the config file with `docker volume inspect libreoffice-online_config-volume`.
+You should see the mount point like `/var/lib/docker/volumes/libreoffice-online_config-volume/_data`. The file `loolwsd.xml` in that directory is the main config file.
 
-Leave your container, then restart it:
-```bash
-docker-compose stop
-docker-compose start
-```
+Edit it to your liking, then restart the container: `docker-compose restart`
 
 ## Using it
 
