@@ -9,9 +9,15 @@ services:
       password: ${LO_ONLINE_PASSWORD}
       extra_params: ${LO_ONLINE_EXTRA_PARAMS}
       DONT_GEN_SSL_CERT: 1
+    volumes:
+      - config-volume:/etc/loolwsd
     cap_add:
       - MKNOD
     ports:
       - "9980:9980"
     restart:
       unless-stopped
+
+volumes:
+  config-volume:
+
