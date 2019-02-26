@@ -47,8 +47,8 @@ This will start LibreOffice online with SSL disabled.
 The configuration is stored in a docker volume. This way LibreOffice Online can be configured on the host system
 and the config will not be overwritten when updating the docker container.
 
-The volume is created by docker-compose. You can find the location of the config file with `docker volume inspect libreoffice-online_config-volume`.
-You should see the mount point like `/var/lib/docker/volumes/libreoffice-online_config-volume/_data`. The file `loolwsd.xml` in that directory is the main config file.
+The volume is created by docker-compose. You can find the location of the config file with `docker volume inspect libreofficeonline_config-volume`.
+You should see the mount point like `/var/lib/docker/volumes/libreofficeonline_config-volume/_data`. The file `loolwsd.xml` in that directory is the main config file.
 
 Edit it to your liking, then restart the container: `docker-compose restart`
 
