@@ -72,3 +72,7 @@ docker-compose up -d --build
 
 If it doesn't work, look at the logs from your docker containers, easiest with:
 `docker-compose logs`
+
+## Professional support
+
+If you want to deploy LibreOffice Online in your company/organization, please contact us at https://libreoffice.cib.de/ to get professional support.
