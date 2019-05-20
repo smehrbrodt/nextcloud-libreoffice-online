@@ -59,6 +59,9 @@ Create a document using the '+' button or upload some.
 
 To access the LibreOffice Online admin dashboard, visit http://libreoffice.yourhost:9980/loleaflet/dist/admin/admin.html and use the credentials from your .env file.
 
+To test just LibreOffice Online without using Nextcloud, visit http://libreoffice.yourhost:9980/loleaflet/dist/loleaflet.html?file_path=file:///opt/libreoffice/share/template/common/internal/idxexample.odt .
+Note that you have to allow local file access for this to work. Look for storage/filesystem in the [config](#configuration-changes).
+
 ## Updating
 
 To get the latest version, run the following two commands:
